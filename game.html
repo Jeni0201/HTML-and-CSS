@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Click the Moving Object</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        background: #f2f2f2;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+    }
+
+    h2 {
+        text-align: center;
+        padding: 10px;
+    }
+
+    #gameArea {
+        position: relative;
+        width: 100%;
+        height: 90vh;
+    }
+
+    #object {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: crimson;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: width 0.2s, height 0.2s;
+    }
+</style>
+</head>
+
+<body>
+
+<h2>🎯 Click the Moving Object to Shrink It</h2>
+
+<div id="gameArea">
+    <div id="object"></div>
+</div>
+
+<script>
+    const object = document.getElementById("object");
+    const gameArea = document.getElementById("gameArea");
+
+    let size = 80;
+
+    // Move object randomly
+    function moveObject() {
+        const maxX = gameArea.clientWidth - size;
+        const maxY = gameArea.clientHeight - size;
+
+        const x = Math.random() * maxX;
+        const y = Math.random() * maxY;
+
+        object.style.left = x + "px";
+        object.style.top = y + "px";
+    }
+
+    // Initial position
+    moveObject();
+
+    // Move every second
+    setInterval(moveObject, 1000);
+
+    // On click: decrease size
+    object.addEventListener("click", () => {
+        size -= 10;
+
+        if (size <= 20) {
+            alert("🎉 You Win!");
+            size = 80; // reset game
+        }
+
+        object.style.width = size + "px";
+        object.style.height = size + "px";
+        moveObject();
+    });
+</script>
+
+</body>
+</html>
