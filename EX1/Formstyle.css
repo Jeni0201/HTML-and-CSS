@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Main heading */
+.heading {
+    text-align: center;
+    border-style: double;
+    padding: 10px;
+}
+
+/* Information paragraph */
+.note {
+    text-align: center;
+    font-size: large;
+}
+
+/* Space between form elements */
+input,
+select {
+    margin-bottom: 30px;
+}
+
+/* Radio button section */
+.slot {
+    margin-bottom: 30px;
+}
+
+/* Agreement section */
+.confirm {
+    margin-top: 20px;
+}
+
+/* Submit button spacing */
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 6px 15px;
+}
+
+/* Back to top link */
+.back-top {
+    text-align: center;
+    margin-top: 20px;
+}

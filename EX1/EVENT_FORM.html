@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EVENT REGISTRATION FORM</title>
+</head>
+
+<body>
+
+    <h1 id="s1" class="heading">Event Registration Form</h1>
+
+    <p class="note">
+        Register to participate in our upcoming event.
+        For event updates, visit
+        <a href="https://www.eventbrite.com/" target="_blank">Event Page</a>
+    </p>
+
+    <fieldset>
+        <legend>Participant Details</legend><br>
+
+        <form method="get" action="EVENT_FORM.html" autocomplete="on">
+            Registration ID:
+            <input type="text" name="regid" placeholder="ex: EVT2025" required><br><br>
+
+            Participant Name:
+            <input type="text" name="pname" required><br><br>
+
+            Event Category:
+            <select name="category">
+                <option value="Workshop">Workshop</option>
+                <option value="Conference">Conference</option>
+                <option value="Cultural">Cultural Event</option>
+                <option value="Sports">Sports</option>
+            </select><br><br>
+
+            <div class="slot">
+                <label>Event Slot:</label>
+                <input type="radio" name="slot" value="Morning"> Morning
+                <input type="radio" name="slot" value="Evening"> Evening
+            </div><br>
+
+            Email ID:
+            <input type="email" name="email" placeholder="participant@gmail.com" required><br><br>
+
+            Create Password:
+            <input type="password" name="password" required><br><br>
+        </form>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Event Preferences</legend><br>
+
+        <form method="get" action="EVENT_FORM.html">
+            Event Date:
+            <input type="date" name="edate"><br><br>
+
+            Reporting Time:
+            <input type="time" name="etime"><br><br>
+
+            Search Events:
+            <input type="search" name="search" list="eventList" placeholder="Search events"><br><br>
+
+            <datalist id="eventList">
+                <option value="Tech Conference">
+                <option value="Music Concert">
+                <option value="Cultural Fest">
+                <option value="Sports Meet">
+                <option value="Workshop">
+            </datalist>
+
+            Interest Level:
+            <input type="range" min="0" max="100" value="70"><br><br>
+
+            Badge Color:
+            <input type="color"><br><br>
+        </form>
+    </fieldset>
+
+    <br>
+
+    <form method="get" action="EVENT_FORM.html" class="confirm">
+        <input type="checkbox" name="agree" required>
+        <label>I agree to the event rules and terms</label><br><br>
+
+        <center>
+            <input type="submit" value="Register">
+        </center>
+    </form>
+
+    <p id="s2" class="top-link">
+        <a href="#s1">Move to Top</a>
+    </p>
+
+</body>
+</html>
