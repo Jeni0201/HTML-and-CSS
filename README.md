@@ -32,6 +32,7 @@ project-folder
 │
 ├── event-registration-form
 │   ├── eventregister.html
+|   |-- Formstyle.css
 │   
 │
 ├── store-page-design
