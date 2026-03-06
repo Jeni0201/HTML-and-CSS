@@ -37,14 +37,14 @@ project-folder
 ├── store-page-design
 │   ├── index.html
 │   └── style.css
+|   |-- angel.jpg
 │
 ├── game-simulation
-│   ├── index.html
-│   └── style.css
+│   ├── game.html
+│   
 │
 ├── digital-clock-simulation
-│   ├── index.html
-│   └── style.css
+│   ├── digiclock.html
 │
 └── README.md
 ```
